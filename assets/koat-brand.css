@@ -19,6 +19,14 @@
   --shadow-pop: 4px 4px 0 rgb(var(--color-foreground));
 }
 
+/* ---------------- hard brand lock: hero + announcement bar ---------------- */
+
+.koat-hero,
+.utility-bar {
+  background: #0000ff !important;
+  color: #fff !important;
+}
+
 /* ---------------- product card: flavour-tinted tile + sticker shadow ---------------- */
 
 .card-wrapper .card__media {
