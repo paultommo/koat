@@ -27,10 +27,33 @@
   color: #fff !important;
 }
 
-/* ---------------- product card: flavour-tinted tile + sticker shadow ---------------- */
+/* ---------------- buttons: pill shape ---------------- */
+
+.button {
+  border-radius: 999px !important;
+}
+
+/* ---------------- product card: ink outline, radius, sticker shadow ---------------- */
 
 .card-wrapper .card__media {
   transition: transform var(--duration-medium) ease, box-shadow var(--duration-medium) ease;
+}
+
+.card--card,
+.card--standard .card__inner {
+  border: 2px solid #181818 !important;
+  border-radius: 22px !important;
+  transition: transform var(--duration-medium) ease, box-shadow var(--duration-medium) ease;
+}
+
+.card--card:after,
+.card--standard .card__inner:after {
+  border-radius: 22px !important;
+  box-shadow: 2px 3px 0 #181818 !important;
+}
+
+.card .card__inner .card__media {
+  border-radius: 20px !important;
 }
 
 .card-wrapper:hover .card--card,
@@ -39,9 +62,9 @@
   box-shadow: var(--shadow-pop);
 }
 
-.card--card,
-.card--standard .card__inner {
-  transition: transform var(--duration-medium) ease, box-shadow var(--duration-medium) ease;
+.card-wrapper:hover .card--card:after,
+.card-wrapper:hover .card--standard .card__inner:after {
+  box-shadow: none !important;
 }
 
 .card__media.koat-tint--banana {
