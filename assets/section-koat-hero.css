@@ -47,6 +47,7 @@
 
 .koat-hero__media img {
   width: 100%;
+  height: auto;
   max-width: 46rem;
   transform: rotate(-4deg);
   filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.3));
