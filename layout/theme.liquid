@@ -292,6 +292,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {%- comment -%} KOAT brand overrides — colors, type, buttons, cards, marquee {%- endcomment -%}
     {{ 'koat-brand.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
