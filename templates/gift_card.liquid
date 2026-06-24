@@ -129,7 +129,7 @@
 
     <main>
       <div class="gift-card__image-wrapper">
-        {%- if settings.logo != blank -%}
+        {%- if settings.logo != blank and settings.logo.aspect_ratio -%}
           {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
           {{ settings.logo | image_url: width: 570 | image_tag: class: 'gift-card__image', alt: logo_alt }}
         {%- else %}

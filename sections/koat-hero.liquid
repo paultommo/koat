@@ -74,12 +74,14 @@
           <span class="koat-tag koat-tag--{{ tag_block.settings.tone }}">{{ tag_block.settings.text | escape }}</span>
         </div>
       {%- endif -%}
-      {%- if section.settings.image != blank -%}
+      {%- if section.settings.image != blank and section.settings.image.aspect_ratio -%}
         {{
           section.settings.image
           | image_url: width: 1000
           | image_tag: widths: '300, 450, 600, 750, 900, 1000', sizes: '(min-width: 750px) 46rem, 80vw'
         }}
+      {%- else -%}
+        {{ 'KOAT-blueberries.png' | asset_url | image_tag: alt: 'KOAT blueberry kefir oat bar', loading: 'lazy' }}
       {%- endif -%}
     </div>
   </div>

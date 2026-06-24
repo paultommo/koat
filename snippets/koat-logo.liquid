@@ -1,0 +1,34 @@
+{% comment %}
+  Renders the KOAT logo. Prefers a real merchant-uploaded logo (settings.logo,
+  set via the theme customizer's image picker) when one is present; otherwise
+  falls back to the bundled brand wordmark shipped in the theme's assets so
+  the header never shows a broken image.
+
+  Accepts:
+  - css_class: {String} class to apply to the rendered img (optional)
+  - logo_width: {Number} target render width in px (optional, default settings.logo_width)
+{% endcomment %}
+{%- liquid
+  assign logo_width = logo_width | default: settings.logo_width
+  assign fallback_logo_height = logo_width | divided_by: 1.5
+-%}
+{%- if settings.logo != blank and settings.logo.aspect_ratio -%}
+  {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+  {%- assign logo_height = logo_width | divided_by: settings.logo.aspect_ratio -%}
+  {{
+    settings.logo
+    | image_url: width: 600
+    | image_tag:
+      class: css_class,
+      widths: '150, 225, 300, 450, 600',
+      width: logo_width,
+      height: logo_height,
+      alt: logo_alt
+  }}
+{%- else -%}
+  {{
+    'KOAT-logo.png'
+    | asset_url
+    | image_tag: class: css_class, width: logo_width, height: fallback_logo_height, alt: shop.name, loading: 'lazy'
+  }}
+{%- endif -%}
