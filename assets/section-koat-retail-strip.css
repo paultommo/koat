@@ -1,0 +1,25 @@
+.koat-retail-strip__label {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.75);
+  margin-bottom: 18px;
+}
+
+.koat-retail-strip__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.koat-retail-strip__item {
+  font-family: var(--font-body-family);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: rgb(var(--color-foreground));
+  opacity: 0.55;
+}

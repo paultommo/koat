@@ -1,0 +1,60 @@
+.koat-editorial__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.koat-editorial__panel {
+  border: 2px solid var(--koat-ink, #181818);
+  border-radius: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.koat-editorial__panel--leaf {
+  background: var(--koat-leaf-soft);
+  color: #36471f;
+}
+
+.koat-editorial__panel--leaf .koat-editorial__heading {
+  color: #2e4519;
+}
+
+.koat-editorial__panel--cream-deep {
+  background: var(--koat-cream-deep);
+  color: rgb(var(--color-foreground));
+}
+
+.koat-editorial__panel--banana {
+  background: var(--koat-banana);
+  color: var(--koat-banana-ink);
+}
+
+.koat-editorial__panel--ink {
+  background: var(--koat-ink, #181818);
+  color: #fff;
+}
+
+.koat-editorial__heading {
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  font-size: 3.8rem;
+  line-height: 1;
+  text-transform: lowercase;
+  margin: 14px 0 12px;
+}
+
+.koat-editorial__body {
+  max-width: 38rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 749px) {
+  .koat-editorial__grid {
+    grid-template-columns: 1fr;
+  }
+}

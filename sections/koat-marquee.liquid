@@ -1,0 +1,65 @@
+{{ 'section-koat-marquee.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign phrase_blocks = section.blocks | where: 'type', 'phrase'
+-%}
+
+<div class="koat-marquee-section color-{{ section.settings.color_scheme }}">
+  <div class="koat-marquee">
+    <div class="koat-marquee__track">
+      {%- for i in (1..2) -%}
+        {%- for block in phrase_blocks -%}
+          <span class="koat-marquee__item" {% if i == 1 %}{{ block.shopify_attributes }}{% endif %}>
+            {{ block.settings.text | escape }} ✦
+          </span>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KOAT Marquee",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "phrase",
+      "name": "Phrase",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "GUT FRIENDLY"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KOAT Marquee",
+      "blocks": [
+        { "type": "phrase", "settings": { "text": "9G FIBRE LINE" } },
+        { "type": "phrase", "settings": { "text": "GUT FRIENDLY" } },
+        { "type": "phrase", "settings": { "text": "REAL FRUIT" } },
+        { "type": "phrase", "settings": { "text": "PROBIOTIC KEFIR" } },
+        { "type": "phrase", "settings": { "text": "NO JUNK" } },
+        { "type": "phrase", "settings": { "text": "PLANT POWERED" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

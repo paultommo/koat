@@ -1,75 +1,134 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "koat_hero": {
+      "type": "koat-hero",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
+        "badge-1": {
+          "type": "badge",
+          "settings": { "text": "12g Protein", "tone": "banana" }
         },
-        "button": {
+        "badge-2": {
+          "type": "badge",
+          "settings": { "text": "Live Kefir Cultures", "tone": "solid" }
+        },
+        "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop the bars",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Why kefir?",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
+        },
+        "tag": {
+          "type": "tag",
+          "settings": { "text": "new drop", "tone": "banana" }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["badge-1", "badge-2", "buttons", "tag"],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "color_scheme": "scheme-5",
+        "heading": "snacks your gut loves",
+        "body": "<p>Protein-rich oats meet probiotic-packed kefir. Real fruit, real cultures, genuinely delicious.</p>",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "koat_marquee": {
+      "type": "koat-marquee",
+      "blocks": {
+        "phrase-1": { "type": "phrase", "settings": { "text": "9G FIBRE LINE" } },
+        "phrase-2": { "type": "phrase", "settings": { "text": "GUT FRIENDLY" } },
+        "phrase-3": { "type": "phrase", "settings": { "text": "REAL FRUIT" } },
+        "phrase-4": { "type": "phrase", "settings": { "text": "PROBIOTIC KEFIR" } },
+        "phrase-5": { "type": "phrase", "settings": { "text": "NO JUNK" } },
+        "phrase-6": { "type": "phrase", "settings": { "text": "PLANT POWERED" } }
+      },
+      "block_order": ["phrase-1", "phrase-2", "phrase-3", "phrase-4", "phrase-5", "phrase-6"],
+      "settings": {
+        "color_scheme": "scheme-3"
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
+        "title": "shop the bars",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "products_to_show": 6,
+        "columns_desktop": 3,
         "color_scheme": "scheme-1",
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "link",
         "enable_desktop_slider": false,
         "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "quick_add": "none",
+        "quick_add": "standard",
         "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 0
+      }
+    },
+    "koat_editorial": {
+      "type": "koat-editorial",
+      "blocks": {
+        "panel-1": {
+          "type": "panel",
+          "settings": {
+            "tone": "leaf",
+            "badge_text": "The kefir difference",
+            "heading": "billions of live cultures, in a bar",
+            "body": "<p>We bake real kefir into every batch — so each bar carries the same gut-friendly cultures you'd find in the fridge aisle, minus the spoon.</p>"
+          }
+        },
+        "panel-2": {
+          "type": "panel",
+          "settings": {
+            "tone": "cream-deep",
+            "badge_text": "Made with real ingredients",
+            "heading": "oats you can see, fruit you can taste",
+            "body": "<p>Whole rolled oats, real fruit, and nothing you can't pronounce. No funny business, no fillers.</p>"
+          }
+        }
+      },
+      "block_order": ["panel-1", "panel-2"],
+      "settings": {
+        "padding_top": 64,
+        "padding_bottom": 0
+      }
+    },
+    "koat_retail_strip": {
+      "type": "koat-retail-strip",
+      "blocks": {
+        "retailer-1": { "type": "retailer", "settings": { "name": "Walmart" } },
+        "retailer-2": { "type": "retailer", "settings": { "name": "Whole Foods" } },
+        "retailer-3": { "type": "retailer", "settings": { "name": "Target" } },
+        "retailer-4": { "type": "retailer", "settings": { "name": "Instacart" } },
+        "retailer-5": { "type": "retailer", "settings": { "name": "Sprouts" } }
+      },
+      "block_order": ["retailer-1", "retailer-2", "retailer-3", "retailer-4", "retailer-5"],
+      "settings": {
+        "label": "Find us in store & online",
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "koat_hero",
+    "koat_marquee",
+    "featured_collection",
+    "koat_editorial",
+    "koat_retail_strip"
   ]
 }

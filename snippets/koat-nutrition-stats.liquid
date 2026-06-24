@@ -1,0 +1,34 @@
+{% comment %}
+  Renders a 4-up nutrition stat tile grid for the product page.
+
+  Accepts:
+  - block: {Object} the nutrition_stats block (settings: stat_1..4_value/label)
+{% endcomment %}
+{{ 'component-koat-nutrition-stats.css' | asset_url | stylesheet_tag }}
+
+<div class="koat-nutrition-stats" {{ block.shopify_attributes }}>
+  {%- for i in (1..4) -%}
+    {%- liquid
+      case i
+        when 1
+          assign stat_value = block.settings.stat_1_value
+          assign stat_label = block.settings.stat_1_label
+        when 2
+          assign stat_value = block.settings.stat_2_value
+          assign stat_label = block.settings.stat_2_label
+        when 3
+          assign stat_value = block.settings.stat_3_value
+          assign stat_label = block.settings.stat_3_label
+        when 4
+          assign stat_value = block.settings.stat_4_value
+          assign stat_label = block.settings.stat_4_label
+      endcase
+    -%}
+    {%- if stat_value != blank or stat_label != blank -%}
+      <div class="koat-nutrition-stats__tile">
+        <div class="koat-nutrition-stats__value">{{ stat_value }}</div>
+        <div class="koat-nutrition-stats__label">{{ stat_label }}</div>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

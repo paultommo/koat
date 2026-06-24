@@ -39,6 +39,15 @@
     if ratio == 0 or ratio == null
       assign ratio = 1
     endif
+
+    assign koat_tint = 'default'
+    if card_product.tags contains 'banana'
+      assign koat_tint = 'banana'
+    elsif card_product.tags contains 'blueberry'
+      assign koat_tint = 'blueberry'
+    elsif card_product.tags contains 'raspberry'
+      assign koat_tint = 'raspberry'
+    endif
   -%}
 
   <product-component view-event-payload="{{ card_product | standard_event_data: 'view', context: product_view_context | escape }}">
@@ -60,7 +69,7 @@
           style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
         >
           {%- if card_product.featured_media -%}
-            <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
+            <div class="card__media koat-tint--{{ koat_tint }}{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
               <div class="media media--transparent media--hover-effect">
                 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
                 <img

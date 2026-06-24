@@ -1,0 +1,223 @@
+/* KOAT brand overrides — layered on top of Dawn's settings-driven CSS.
+   Covers things the theme settings UI can't express: flavour tints,
+   the solid-offset "sticker" shadow, circular icon buttons, and the
+   homepage marquee animation. */
+
+:root {
+  --koat-banana: #ffcc00;
+  --koat-banana-ink: #6b5200;
+  --koat-blueberry: #2d4ed8;
+  --koat-raspberry: #e0286e;
+  --koat-leaf: #5e8c3a;
+  --koat-leaf-soft: #a7c18c;
+  --koat-cream-deep: #e8dec8;
+
+  --koat-tint-banana: #fff3cc;
+  --koat-tint-blueberry: #dce3fb;
+  --koat-tint-raspberry: #fbd7e6;
+
+  --shadow-pop: 4px 4px 0 rgb(var(--color-foreground));
+}
+
+/* ---------------- product card: flavour-tinted tile + sticker shadow ---------------- */
+
+.card-wrapper .card__media {
+  transition: transform var(--duration-medium) ease, box-shadow var(--duration-medium) ease;
+}
+
+.card-wrapper:hover .card--card,
+.card-wrapper:hover .card--standard .card__inner {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-pop);
+}
+
+.card--card,
+.card--standard .card__inner {
+  transition: transform var(--duration-medium) ease, box-shadow var(--duration-medium) ease;
+}
+
+.card__media.koat-tint--banana {
+  background-color: var(--koat-tint-banana);
+}
+
+.card__media.koat-tint--blueberry {
+  background-color: var(--koat-tint-blueberry);
+}
+
+.card__media.koat-tint--raspberry {
+  background-color: var(--koat-tint-raspberry);
+}
+
+.card__media.koat-tint--default {
+  background-color: var(--koat-cream-deep);
+}
+
+.card__media.koat-tint--banana img,
+.card__media.koat-tint--blueberry img,
+.card__media.koat-tint--raspberry img,
+.card__media.koat-tint--default img {
+  mix-blend-mode: multiply;
+}
+
+/* ---------------- header: circular icon buttons ---------------- */
+
+.header__icon {
+  border-radius: var(--radius-pill, 999px);
+  border: 2px solid rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+}
+
+.header__icon--cart {
+  background: var(--koat-blue, #0000ff);
+  border-color: var(--koat-blue, #0000ff);
+  color: #fff;
+}
+
+.header__icon--cart .icon {
+  color: #fff;
+}
+
+.cart-count-bubble {
+  background-color: var(--koat-raspberry);
+  border: 2px solid rgb(var(--color-background));
+}
+
+/* ---------------- marquee ticker ---------------- */
+
+.koat-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.koat-marquee__track {
+  display: inline-block;
+  animation: koat-marquee 22s linear infinite;
+}
+
+.koat-marquee__item {
+  font-family: var(--font-heading-family);
+  margin: 0 26px;
+}
+
+@keyframes koat-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------------- footer accent heading ---------------- */
+
+.footer-block__heading {
+  color: var(--koat-banana);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ---------------- cart drawer / quantity stepper ---------------- */
+
+.quantity__button {
+  border-radius: var(--radius-pill, 999px);
+}
+
+/* ---------------- shared badge / tag (hero, editorial, shelves) ---------------- */
+
+.koat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1.5px solid currentColor;
+  font-family: var(--font-body-family);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.koat-badge--ink {
+  background: transparent;
+  color: rgb(var(--color-foreground));
+  border-color: currentColor;
+}
+
+.koat-badge--solid {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  border-color: transparent;
+}
+
+.koat-badge--blue {
+  background: var(--koat-blue, #0000ff);
+  color: #fff;
+  border-color: transparent;
+}
+
+.koat-badge--banana {
+  background: var(--koat-banana);
+  color: var(--koat-banana-ink);
+  border-color: transparent;
+}
+
+.koat-badge--blueberry {
+  background: var(--koat-blueberry);
+  color: #fff;
+  border-color: transparent;
+}
+
+.koat-badge--raspberry {
+  background: var(--koat-raspberry);
+  color: #fff;
+  border-color: transparent;
+}
+
+.koat-badge--leaf {
+  background: var(--koat-leaf-soft);
+  color: #2e4519;
+  border-color: transparent;
+}
+
+.koat-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(24, 24, 24, 0.08));
+  white-space: nowrap;
+}
+
+.koat-tag--blue {
+  background: var(--koat-blue, #0000ff);
+  color: #fff;
+}
+
+.koat-tag--ink {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+.koat-tag--banana {
+  background: var(--koat-banana);
+  color: var(--koat-banana-ink);
+}
+
+.koat-tag--raspberry {
+  background: var(--koat-raspberry);
+  color: #fff;
+}
+
+.koat-tag--leaf {
+  background: var(--koat-leaf);
+  color: #fff;
+}

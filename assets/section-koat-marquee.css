@@ -1,0 +1,11 @@
+.koat-marquee-section {
+  padding: 12px 0;
+}
+
+.koat-marquee__item {
+  font-size: 2rem;
+}
+
+.koat-marquee__item:nth-child(even) {
+  color: var(--koat-banana);
+}

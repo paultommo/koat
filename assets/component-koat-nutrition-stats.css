@@ -1,0 +1,36 @@
+.koat-nutrition-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px 0 6px;
+}
+
+.koat-nutrition-stats__tile {
+  background: rgb(var(--color-background));
+  border: 2px solid rgb(var(--color-foreground));
+  border-radius: 14px;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.koat-nutrition-stats__value {
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: rgb(var(--color-foreground));
+}
+
+.koat-nutrition-stats__label {
+  font-family: var(--font-body-family);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+@media screen and (max-width: 749px) {
+  .koat-nutrition-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

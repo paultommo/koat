@@ -141,6 +141,8 @@
                       {{ form | payment_terms }}
                     {%- endform -%}
                   </div>
+                {%- when 'nutrition_stats' -%}
+                  {%- render 'koat-nutrition-stats', block: block -%}
                 {%- when 'inventory' -%}
                   <p
                     class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -803,6 +805,61 @@
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
+    },
+    {
+      "type": "nutrition_stats",
+      "name": "Nutrition stats",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "stat_1_value",
+          "label": "Stat 1 value",
+          "default": "12g"
+        },
+        {
+          "type": "text",
+          "id": "stat_1_label",
+          "label": "Stat 1 label",
+          "default": "Protein"
+        },
+        {
+          "type": "text",
+          "id": "stat_2_value",
+          "label": "Stat 2 value",
+          "default": "6g"
+        },
+        {
+          "type": "text",
+          "id": "stat_2_label",
+          "label": "Stat 2 label",
+          "default": "Fibre"
+        },
+        {
+          "type": "text",
+          "id": "stat_3_value",
+          "label": "Stat 3 value",
+          "default": "7g"
+        },
+        {
+          "type": "text",
+          "id": "stat_3_label",
+          "label": "Stat 3 label",
+          "default": "Sugar"
+        },
+        {
+          "type": "text",
+          "id": "stat_4_value",
+          "label": "Stat 4 value",
+          "default": "210"
+        },
+        {
+          "type": "text",
+          "id": "stat_4_label",
+          "label": "Stat 4 label",
+          "default": "Cals"
+        }
+      ]
     },
     {
       "type": "sku",

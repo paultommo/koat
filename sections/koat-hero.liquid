@@ -1,0 +1,261 @@
+{{ 'section-koat-hero.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="koat-hero color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="koat-hero__inner page-width">
+    <div>
+      {%- assign badge_blocks = section.blocks | where: 'type', 'badge' -%}
+      {%- if badge_blocks.size > 0 -%}
+        <div class="koat-hero__badges">
+          {%- for block in badge_blocks -%}
+            <span class="koat-badge koat-badge--{{ block.settings.tone }}" {{ block.shopify_attributes }}>
+              {{ block.settings.text | escape }}
+            </span>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="koat-hero__heading">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+
+      {%- if section.settings.body != blank -%}
+        <div class="koat-hero__body rte">{{ section.settings.body }}</div>
+      {%- endif -%}
+
+      {%- assign button_block = section.blocks | where: 'type', 'buttons' | first -%}
+      {%- if button_block -%}
+        <div class="koat-hero__buttons" {{ button_block.shopify_attributes }}>
+          {%- if button_block.settings.button_label_1 != blank -%}
+            <a
+              {% if button_block.settings.button_link_1 == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ button_block.settings.button_link_1 }}"
+              {% endif %}
+              class="button{% if button_block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+            >
+              {{- button_block.settings.button_label_1 | escape -}}
+            </a>
+          {%- endif -%}
+          {%- if button_block.settings.button_label_2 != blank -%}
+            <a
+              {% if button_block.settings.button_link_2 == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ button_block.settings.button_link_2 }}"
+              {% endif %}
+              class="button{% if button_block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+            >
+              {{- button_block.settings.button_label_2 | escape -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="koat-hero__media">
+      {%- assign tag_block = section.blocks | where: 'type', 'tag' | first -%}
+      {%- if tag_block and tag_block.settings.text != blank -%}
+        <div class="koat-hero__tag" {{ tag_block.shopify_attributes }}>
+          <span class="koat-tag koat-tag--{{ tag_block.settings.tone }}">{{ tag_block.settings.text | escape }}</span>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1000
+          | image_tag: widths: '300, 450, 600, 750, 900, 1000', sizes: '(min-width: 750px) 46rem, 80vw'
+        }}
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KOAT Hero",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-5"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "snacks your gut loves"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body text",
+      "default": "<p>Protein-rich oats meet probiotic-packed kefir. Real fruit, real cultures, genuinely delicious.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product image"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "12g Protein"
+        },
+        {
+          "type": "select",
+          "id": "tone",
+          "label": "Tone",
+          "options": [
+            { "value": "ink", "label": "Ink outline" },
+            { "value": "solid", "label": "Solid ink" },
+            { "value": "blue", "label": "Blue" },
+            { "value": "banana", "label": "Banana" },
+            { "value": "blueberry", "label": "Blueberry" },
+            { "value": "raspberry", "label": "Raspberry" },
+            { "value": "leaf", "label": "Leaf" }
+          ],
+          "default": "banana"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Buttons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Button 1"
+        },
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "label": "Label",
+          "default": "Shop the bars"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_1",
+          "label": "Use secondary style",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Button 2"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "label": "Label",
+          "default": "Why kefir?"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "label": "Use secondary style",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "tag",
+      "name": "Corner tag",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "new drop"
+        },
+        {
+          "type": "select",
+          "id": "tone",
+          "label": "Tone",
+          "options": [
+            { "value": "blue", "label": "Blue" },
+            { "value": "ink", "label": "Ink" },
+            { "value": "banana", "label": "Banana" },
+            { "value": "raspberry", "label": "Raspberry" },
+            { "value": "leaf", "label": "Leaf" }
+          ],
+          "default": "banana"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KOAT Hero",
+      "blocks": [
+        { "type": "badge", "settings": { "text": "12g Protein", "tone": "banana" } },
+        { "type": "badge", "settings": { "text": "Live Kefir Cultures", "tone": "solid" } },
+        { "type": "buttons" },
+        { "type": "tag" }
+      ]
+    }
+  ]
+}
+{% endschema %}
