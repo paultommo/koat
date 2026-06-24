@@ -26,9 +26,12 @@
       alt: logo_alt
   }}
 {%- else -%}
-  {{
-    'KOAT-logo.png'
-    | asset_url
-    | image_tag: class: css_class, width: logo_width, height: fallback_logo_height, alt: shop.name, loading: 'lazy'
-  }}
+  <img
+    src="{{ 'KOAT-logo.png' | asset_url }}"
+    {% if css_class %}class="{{ css_class }}"{% endif %}
+    width="{{ logo_width }}"
+    height="{{ fallback_logo_height }}"
+    alt="{{ shop.name }}"
+    loading="lazy"
+  >
 {%- endif -%}

@@ -81,7 +81,13 @@
           | image_tag: widths: '300, 450, 600, 750, 900, 1000', sizes: '(min-width: 750px) 46rem, 80vw'
         }}
       {%- else -%}
-        {{ 'KOAT-blueberries.png' | asset_url | image_tag: alt: 'KOAT blueberry kefir oat bar', loading: 'lazy' }}
+        <img
+          src="{{ 'KOAT-blueberries.png' | asset_url }}"
+          alt="KOAT blueberry kefir oat bar"
+          width="1000"
+          height="1000"
+          loading="lazy"
+        >
       {%- endif -%}
     </div>
   </div>
