@@ -215,7 +215,14 @@
         "panel-2": {
           "type": "panel",
           "settings": {
-            "tone": "cream-deep"
+            "tone": "cream-deep",
+            "badge_text": "Made with real ingredients",
+            "heading": "oats you can see, fruit you can taste",
+            "body": "<p>Whole rolled oats, real fruit, and nothing you can't pronounce. No funny business, no fillers.</p>",
+            "badge_text_2": "",
+            "heading_2": "",
+            "body_2": "",
+            "image": "shopify://shop_images/KOAT-goat.png"
           }
         }
       },
