@@ -31,12 +31,16 @@
             "button_style_secondary_2": true
           }
         },
+        "google-reviews": {
+          "type": "google_reviews",
+          "settings": { "rating": "4.9", "review_count": "220+", "review_url": "" }
+        },
         "tag": {
           "type": "tag",
           "settings": { "text": "new drop", "tone": "banana" }
         }
       },
-      "block_order": ["badge-1", "badge-2", "buttons", "tag"],
+      "block_order": ["badge-1", "badge-2", "buttons", "google-reviews", "tag"],
       "settings": {
         "color_scheme": "scheme-5",
         "heading": "snacks your gut loves",
