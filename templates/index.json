@@ -206,16 +206,16 @@
             "tone": "leaf",
             "badge_text": "The kefir difference",
             "heading": "billions of live cultures, in a bar",
-            "body": "<p>We bake real kefir into every batch — so each bar carries the same gut-friendly cultures you'd find in the fridge aisle, minus the spoon.</p>"
+            "body": "<p>We bake real kefir into every batch — so each bar carries the same gut-friendly cultures you'd find in the fridge aisle, minus the spoon.</p>",
+            "badge_text_2": "Made with real ingredients",
+            "heading_2": "oats you can see, fruit you can taste",
+            "body_2": "<p>Whole rolled oats, real fruit, and nothing you can't pronounce. No funny business, no fillers.</p>"
           }
         },
         "panel-2": {
           "type": "panel",
           "settings": {
-            "tone": "cream-deep",
-            "badge_text": "Made with real ingredients",
-            "heading": "oats you can see, fruit you can taste",
-            "body": "<p>Whole rolled oats, real fruit, and nothing you can't pronounce. No funny business, no fillers.</p>"
+            "tone": "cream-deep"
           }
         }
       },
