@@ -133,17 +133,14 @@
 
 .header__icon {
   border-radius: var(--radius-pill, 999px);
-  border: 2px solid rgb(var(--color-foreground));
-  background: rgb(var(--color-background));
-}
-
-.header__icon--cart {
-  background: var(--koat-blue, #0000ff);
-  border-color: var(--koat-blue, #0000ff);
+  border: 0;
+  background: #0000ff;
   color: #fff;
 }
 
-.header__icon--cart .icon {
+.header__icon svg,
+.header__icon .icon,
+.header__icon .svg-wrapper {
   color: #fff;
 }
 
