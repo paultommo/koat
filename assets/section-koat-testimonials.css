@@ -30,6 +30,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 32px 0;
+  text-align: center;
 }
 
 .koat-testimonials__stars {
@@ -47,9 +48,8 @@
   color: #181818;
   margin: 0 0 28px;
   font-style: normal;
-  border-left: 4px solid #181818;
-  padding-left: 28px;
-  text-align: left;
+  border: 0;
+  text-align: center;
 }
 
 .koat-testimonials__author {
@@ -59,7 +59,8 @@
   text-transform: uppercase;
   color: #181818;
   font-style: normal;
-  padding-left: 32px;
+  text-align: center;
+  display: block;
 }
 
 .koat-testimonials__dots {
