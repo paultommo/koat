@@ -35,7 +35,7 @@
 
 .koat-testimonials__stars {
   color: #ffc107;
-  font-size: 2rem;
+  font-size: 5rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
@@ -67,7 +67,7 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 36px;
+  margin-top: 16px;
 }
 
 .koat-testimonials__dot {
