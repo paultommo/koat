@@ -45,18 +45,11 @@
   gap: 8px;
   margin-top: 22px;
   color: inherit;
-  text-decoration: none;
-}
-
-.koat-hero__reviews-logo {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
 }
 
 .koat-hero__reviews-stars {
   color: #ffc107;
-  font-size: 1.5rem;
+  font-size: 1.95rem;
   letter-spacing: 1px;
 }
 
