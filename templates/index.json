@@ -14,11 +14,17 @@
       "blocks": {
         "badge-1": {
           "type": "badge",
-          "settings": { "text": "12g Protein", "tone": "banana" }
+          "settings": {
+            "text": "12g Protein",
+            "tone": "banana"
+          }
         },
         "badge-2": {
           "type": "badge",
-          "settings": { "text": "Live Kefir Cultures", "tone": "solid" }
+          "settings": {
+            "text": "Live Kefir Cultures",
+            "tone": "solid"
+          }
         },
         "buttons": {
           "type": "buttons",
@@ -33,14 +39,26 @@
         },
         "google-reviews": {
           "type": "google_reviews",
-          "settings": { "rating": "4.9", "review_count": "22,000+", "review_url": "" }
+          "settings": {
+            "rating": "4.9",
+            "review_count": "22,000+"
+          }
         },
         "tag": {
           "type": "tag",
-          "settings": { "text": "new drop", "tone": "banana" }
+          "settings": {
+            "text": "new drop",
+            "tone": "banana"
+          }
         }
       },
-      "block_order": ["badge-1", "badge-2", "buttons", "google-reviews", "tag"],
+      "block_order": [
+        "badge-1",
+        "badge-2",
+        "buttons",
+        "google-reviews",
+        "tag"
+      ],
       "settings": {
         "color_scheme": "scheme-5",
         "heading": "snacks your gut loves",
@@ -52,14 +70,51 @@
     "koat_marquee": {
       "type": "koat-marquee",
       "blocks": {
-        "phrase-1": { "type": "phrase", "settings": { "text": "9G FIBRE LINE" } },
-        "phrase-2": { "type": "phrase", "settings": { "text": "GUT FRIENDLY" } },
-        "phrase-3": { "type": "phrase", "settings": { "text": "REAL FRUIT" } },
-        "phrase-4": { "type": "phrase", "settings": { "text": "PROBIOTIC KEFIR" } },
-        "phrase-5": { "type": "phrase", "settings": { "text": "NO JUNK" } },
-        "phrase-6": { "type": "phrase", "settings": { "text": "PLANT POWERED" } }
+        "phrase-1": {
+          "type": "phrase",
+          "settings": {
+            "text": "9G FIBRE LINE"
+          }
+        },
+        "phrase-2": {
+          "type": "phrase",
+          "settings": {
+            "text": "GUT FRIENDLY"
+          }
+        },
+        "phrase-3": {
+          "type": "phrase",
+          "settings": {
+            "text": "REAL FRUIT"
+          }
+        },
+        "phrase-4": {
+          "type": "phrase",
+          "settings": {
+            "text": "PROBIOTIC KEFIR"
+          }
+        },
+        "phrase-5": {
+          "type": "phrase",
+          "settings": {
+            "text": "NO JUNK"
+          }
+        },
+        "phrase-6": {
+          "type": "phrase",
+          "settings": {
+            "text": "PLANT POWERED"
+          }
+        }
       },
-      "block_order": ["phrase-1", "phrase-2", "phrase-3", "phrase-4", "phrase-5", "phrase-6"],
+      "block_order": [
+        "phrase-1",
+        "phrase-2",
+        "phrase-3",
+        "phrase-4",
+        "phrase-5",
+        "phrase-6"
+      ],
       "settings": {
         "color_scheme": "scheme-3"
       }
@@ -67,20 +122,19 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 6,
         "title": "shop the bars",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 6,
         "columns_desktop": 3,
-        "color_scheme": "scheme-1",
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "link",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -88,6 +142,7 @@
         "show_rating": false,
         "quick_add": "standard",
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 64,
         "padding_bottom": 0
       }
@@ -95,14 +150,52 @@
     "koat_testimonials": {
       "type": "koat-testimonials",
       "blocks": {
-        "review-1": { "type": "review", "settings": { "text": "These are honestly the best snacks I've ever had. My gut has never felt better.", "author": "Sarah M." } },
-        "review-2": { "type": "review", "settings": { "text": "The banana kefir bar is absolutely incredible. 12g of protein and it actually tastes good? Sold.", "author": "James T." } },
-        "review-3": { "type": "review", "settings": { "text": "I was sceptical but after a week I could genuinely feel the difference. Obsessed.", "author": "Priya K." } },
-        "review-4": { "type": "review", "settings": { "text": "Finally a healthy snack that doesn't taste like cardboard. The blueberry one is my go-to.", "author": "Luca B." } },
-        "review-5": { "type": "review", "settings": { "text": "Bought for my kids too. They love them and I love that they're actually good for them.", "author": "Emma R." } }
+        "review-1": {
+          "type": "review",
+          "settings": {
+            "text": "These are honestly the best snacks I've ever had. My gut has never felt better.",
+            "author": "Sarah M."
+          }
+        },
+        "review-2": {
+          "type": "review",
+          "settings": {
+            "text": "The banana kefir bar is absolutely incredible. 12g of protein and it actually tastes good? Sold.",
+            "author": "James T."
+          }
+        },
+        "review-3": {
+          "type": "review",
+          "settings": {
+            "text": "I was sceptical but after a week I could genuinely feel the difference. Obsessed.",
+            "author": "Priya K."
+          }
+        },
+        "review-4": {
+          "type": "review",
+          "settings": {
+            "text": "Finally a healthy snack that doesn't taste like cardboard. The blueberry one is my go-to.",
+            "author": "Luca B."
+          }
+        },
+        "review-5": {
+          "type": "review",
+          "settings": {
+            "text": "Bought for my kids too. They love them and I love that they're actually good for them.",
+            "author": "Emma R."
+          }
+        }
       },
-      "block_order": ["review-1", "review-2", "review-3", "review-4", "review-5"],
-      "settings": { "heading": "what people are saying" }
+      "block_order": [
+        "review-1",
+        "review-2",
+        "review-3",
+        "review-4",
+        "review-5"
+      ],
+      "settings": {
+        "heading": "what people are saying"
+      }
     },
     "koat_editorial": {
       "type": "koat-editorial",
@@ -126,7 +219,10 @@
           }
         }
       },
-      "block_order": ["panel-1", "panel-2"],
+      "block_order": [
+        "panel-1",
+        "panel-2"
+      ],
       "settings": {
         "padding_top": 64,
         "padding_bottom": 0
@@ -135,13 +231,44 @@
     "koat_retail_strip": {
       "type": "koat-retail-strip",
       "blocks": {
-        "retailer-1": { "type": "retailer", "settings": { "name": "Walmart" } },
-        "retailer-2": { "type": "retailer", "settings": { "name": "Whole Foods" } },
-        "retailer-3": { "type": "retailer", "settings": { "name": "Target" } },
-        "retailer-4": { "type": "retailer", "settings": { "name": "Instacart" } },
-        "retailer-5": { "type": "retailer", "settings": { "name": "Sprouts" } }
+        "retailer-1": {
+          "type": "retailer",
+          "settings": {
+            "name": "Walmart"
+          }
+        },
+        "retailer-2": {
+          "type": "retailer",
+          "settings": {
+            "name": "Whole Foods"
+          }
+        },
+        "retailer-3": {
+          "type": "retailer",
+          "settings": {
+            "name": "Target"
+          }
+        },
+        "retailer-4": {
+          "type": "retailer",
+          "settings": {
+            "name": "Instacart"
+          }
+        },
+        "retailer-5": {
+          "type": "retailer",
+          "settings": {
+            "name": "Sprouts"
+          }
+        }
       },
-      "block_order": ["retailer-1", "retailer-2", "retailer-3", "retailer-4", "retailer-5"],
+      "block_order": [
+        "retailer-1",
+        "retailer-2",
+        "retailer-3",
+        "retailer-4",
+        "retailer-5"
+      ],
       "settings": {
         "label": "Find us in store & online",
         "padding_top": 64,
