@@ -183,7 +183,19 @@
   }
 }
 
-/* ---------------- footer accent heading ---------------- */
+/* ---------------- footer ---------------- */
+
+.footer {
+  background: #0000ff !important;
+}
+
+.footer-brand-logo {
+  filter: brightness(0) invert(1);
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin-top: 8px;
+}
 
 .footer-block__heading {
   color: var(--koat-banana);

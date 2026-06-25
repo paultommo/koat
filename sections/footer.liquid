@@ -127,6 +127,15 @@
                       {%- endif -%}
                       {%- if settings.brand_description != blank -%}
                         <div class="rte">{{ settings.brand_description }}</div>
+                      {%- elsif settings.logo != blank and settings.logo.aspect_ratio -%}
+                        <img
+                          src="{{ settings.logo | image_url: width: 400 }}"
+                          alt="{{ shop.name }}"
+                          width="200"
+                          height="{{ 200 | divided_by: settings.logo.aspect_ratio | round }}"
+                          class="footer-brand-logo"
+                          loading="lazy"
+                        >
                       {%- endif -%}
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
