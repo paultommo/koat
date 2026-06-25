@@ -212,8 +212,13 @@
 
 .koat-badge--ink {
   background: transparent;
-  color: rgb(var(--color-foreground));
-  border-color: currentColor;
+  border: 0;
+  padding: 0;
+  color: rgb(255, 204, 0);
+}
+
+.koat-editorial__content-divider + .koat-badge--ink {
+  margin-top: 30px;
 }
 
 .koat-badge--solid {
