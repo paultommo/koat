@@ -41,9 +41,9 @@
   border: 2px solid #181818;
   border-radius: 22px;
   box-shadow: 3px 4px 0 #181818;
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 40px 48px;
+  padding: 64px 72px;
   text-align: center;
 }
 
@@ -55,10 +55,10 @@
 }
 
 .koat-testimonials__text {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.55;
   color: #181818;
-  margin: 0 0 24px;
+  margin: 0 0 28px;
   font-style: normal;
 }
 
