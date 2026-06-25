@@ -2,10 +2,6 @@
 
 <div class="koat-testimonials">
   <div class="koat-testimonials__inner">
-    {%- if section.settings.heading != blank -%}
-      <h2 class="koat-testimonials__heading">{{ section.settings.heading }}</h2>
-    {%- endif -%}
-
     <div class="koat-testimonials__overflow">
       <div class="koat-testimonials__track" id="koat-testimonials-track-{{ section.id }}">
         {%- for block in section.blocks -%}

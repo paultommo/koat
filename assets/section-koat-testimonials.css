@@ -10,16 +10,6 @@
   padding: 0 var(--page-width-margin, 3rem);
 }
 
-.koat-testimonials__heading {
-  font-family: var(--font-heading-family);
-  font-size: 3.6rem;
-  font-weight: 400;
-  text-transform: lowercase;
-  text-align: center;
-  margin: 0 0 48px;
-  color: #181818;
-}
-
 .koat-testimonials__overflow {
   overflow: hidden;
 }
@@ -37,14 +27,9 @@
 }
 
 .koat-testimonials__card {
-  background: #fff;
-  border: 2px solid #181818;
-  border-radius: 22px;
-  box-shadow: 3px 4px 0 #181818;
   max-width: 900px;
   margin: 0 auto;
-  padding: 64px 72px;
-  text-align: center;
+  padding: 32px 0;
 }
 
 .koat-testimonials__stars {
@@ -55,19 +40,16 @@
 }
 
 .koat-testimonials__text {
-  font-size: 2.2rem;
-  line-height: 1.55;
+  font-family: var(--font-heading-family);
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.2;
   color: #181818;
   margin: 0 0 28px;
   font-style: normal;
-}
-
-.koat-testimonials__text::before {
-  content: '\201C';
-}
-
-.koat-testimonials__text::after {
-  content: '\201D';
+  border-left: 4px solid #181818;
+  padding-left: 28px;
+  text-align: left;
 }
 
 .koat-testimonials__author {
@@ -77,6 +59,7 @@
   text-transform: uppercase;
   color: #181818;
   font-style: normal;
+  padding-left: 32px;
 }
 
 .koat-testimonials__dots {
@@ -107,15 +90,7 @@
     padding: 48px 0;
   }
 
-  .koat-testimonials__card {
-    padding: 28px 24px;
-  }
-
-  .koat-testimonials__heading {
-    font-size: 2.8rem;
-  }
-
   .koat-testimonials__text {
-    font-size: 1.6rem;
+    font-size: 2.6rem;
   }
 }
