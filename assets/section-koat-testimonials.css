@@ -1,6 +1,6 @@
 .koat-testimonials {
   background: #fbd7e6;
-  padding: 72px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -88,7 +88,7 @@
 
 @media screen and (max-width: 749px) {
   .koat-testimonials {
-    padding: 48px 0;
+    padding: 28px 0;
   }
 
   .koat-testimonials__text {
