@@ -214,7 +214,8 @@
   background: transparent;
   border: 0;
   padding: 0;
-  color: rgb(255, 204, 0);
+  color: #fff;
+  font-size: 2rem;
 }
 
 .koat-editorial__content-divider + .koat-badge--ink {
