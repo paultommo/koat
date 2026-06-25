@@ -15,6 +15,9 @@
 {%- endstyle -%}
 
 <div class="koat-editorial page-width section-{{ section.id }}-padding">
+  {%- if section.settings.heading != blank -%}
+    <h2 class="koat-editorial__section-heading">{{ section.settings.heading }}</h2>
+  {%- endif -%}
   <div class="koat-editorial__grid">
     {%- for block in section.blocks -%}
       {%- if block.type == 'panel' -%}
@@ -43,6 +46,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "why is KOAT the GOAT?"
+    },
     {
       "type": "header",
       "content": "Padding"
