@@ -38,6 +38,12 @@
   flex-shrink: 0;
 }
 
+.koat-guarantee__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .koat-guarantee__title {
   font-family: var(--font-heading-family);
   font-weight: 400;

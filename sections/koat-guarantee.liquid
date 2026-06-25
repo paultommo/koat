@@ -9,139 +9,14 @@
     <div class="koat-guarantee__grid">
       {%- for block in section.blocks -%}
         <div class="koat-guarantee__box" {{ block.shopify_attributes }}>
-          <div class="koat-guarantee__icon" aria-hidden="true">
+          <div class="koat-guarantee__icon">
             {%- case block.settings.icon -%}
-
               {%- when 'money' -%}
-              {%- comment -%}Goat eating cash{%- endcomment -%}
-              <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Body -->
-                <ellipse cx="70" cy="118" rx="38" ry="30" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Head -->
-                <circle cx="70" cy="72" r="30" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Muzzle -->
-                <ellipse cx="70" cy="84" rx="16" ry="11" fill="#e8dec8" stroke="#181818" stroke-width="2"/>
-                <!-- Eyes -->
-                <circle cx="59" cy="65" r="4" fill="#181818"/>
-                <circle cx="81" cy="65" r="4" fill="#181818"/>
-                <circle cx="60.5" cy="63.5" r="1.5" fill="#fff"/>
-                <circle cx="82.5" cy="63.5" r="1.5" fill="#fff"/>
-                <!-- Nostrils -->
-                <ellipse cx="65" cy="88" rx="2" ry="1.5" fill="#c9b99a"/>
-                <ellipse cx="75" cy="88" rx="2" ry="1.5" fill="#c9b99a"/>
-                <!-- Horns -->
-                <path d="M58 45 C53 33 46 28 51 19" stroke="#181818" stroke-width="2.5"/>
-                <path d="M82 45 C87 33 94 28 89 19" stroke="#181818" stroke-width="2.5"/>
-                <!-- Ears -->
-                <path d="M41 66 C30 58 28 72 38 77" fill="#f3ecdd" stroke="#181818" stroke-width="2"/>
-                <path d="M99 66 C110 58 112 72 102 77" fill="#f3ecdd" stroke="#181818" stroke-width="2"/>
-                <!-- Beard -->
-                <path d="M63 94 Q70 104 77 94" stroke="#181818" stroke-width="2"/>
-                <!-- Legs -->
-                <rect x="50" y="137" width="13" height="20" rx="6" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <rect x="77" y="137" width="13" height="20" rx="6" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Dollar bills from mouth -->
-                <g transform="rotate(-18 30 84)">
-                  <rect x="22" y="79" width="26" height="14" rx="3" fill="#22c55e" stroke="#181818" stroke-width="2"/>
-                  <text x="28" y="90" font-size="9" fill="#fff" font-weight="bold" font-family="sans-serif">$</text>
-                </g>
-                <g transform="rotate(8 88 78)">
-                  <rect x="92" y="74" width="26" height="14" rx="3" fill="#22c55e" stroke="#181818" stroke-width="2"/>
-                  <text x="99" y="85" font-size="9" fill="#fff" font-weight="bold" font-family="sans-serif">$</text>
-                </g>
-                <!-- Happy grin -->
-                <path d="M60 90 Q70 98 80 90" stroke="#181818" stroke-width="2"/>
-              </svg>
-
+                <img src="{{ 'KOAT-goat-assistant.png' | asset_url }}" alt="Goat assistant" width="120" height="120" loading="lazy">
               {%- when 'headset' -%}
-              {%- comment -%}Goat with customer service headset{%- endcomment -%}
-              <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Body -->
-                <ellipse cx="70" cy="118" rx="38" ry="30" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Head -->
-                <circle cx="70" cy="72" r="30" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Muzzle -->
-                <ellipse cx="70" cy="84" rx="16" ry="11" fill="#e8dec8" stroke="#181818" stroke-width="2"/>
-                <!-- Eyes -->
-                <circle cx="59" cy="65" r="4" fill="#181818"/>
-                <circle cx="81" cy="65" r="4" fill="#181818"/>
-                <circle cx="60.5" cy="63.5" r="1.5" fill="#fff"/>
-                <circle cx="82.5" cy="63.5" r="1.5" fill="#fff"/>
-                <!-- Nostrils -->
-                <ellipse cx="65" cy="88" rx="2" ry="1.5" fill="#c9b99a"/>
-                <ellipse cx="75" cy="88" rx="2" ry="1.5" fill="#c9b99a"/>
-                <!-- Horns (shorter, headset goes over) -->
-                <path d="M59 46 C55 36 49 32 53 24" stroke="#181818" stroke-width="2.5"/>
-                <path d="M81 46 C85 36 91 32 87 24" stroke="#181818" stroke-width="2.5"/>
-                <!-- Ears -->
-                <path d="M41 66 C30 58 28 72 38 77" fill="#f3ecdd" stroke="#181818" stroke-width="2"/>
-                <path d="M99 66 C110 58 112 72 102 77" fill="#f3ecdd" stroke="#181818" stroke-width="2"/>
-                <!-- Beard -->
-                <path d="M63 94 Q70 104 77 94" stroke="#181818" stroke-width="2"/>
-                <!-- Headset band arc -->
-                <path d="M34 62 Q70 22 106 62" stroke="#0000ff" stroke-width="4" fill="none"/>
-                <!-- Headset ear cups -->
-                <rect x="27" y="58" width="14" height="18" rx="7" fill="#0000ff" stroke="#181818" stroke-width="2"/>
-                <rect x="99" y="58" width="14" height="18" rx="7" fill="#0000ff" stroke="#181818" stroke-width="2"/>
-                <!-- Microphone arm -->
-                <path d="M30 72 Q20 90 28 98" stroke="#181818" stroke-width="2.5"/>
-                <!-- Mic bubble -->
-                <circle cx="28" cy="101" r="5" fill="#0000ff" stroke="#181818" stroke-width="2"/>
-                <!-- Smile -->
-                <path d="M60 88 Q70 96 80 88" stroke="#181818" stroke-width="2"/>
-                <!-- Legs -->
-                <rect x="50" y="137" width="13" height="20" rx="6" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <rect x="77" y="137" width="13" height="20" rx="6" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-              </svg>
-
+                <img src="{{ 'KOAT-goat-cash.png' | asset_url }}" alt="Goat with cash" width="120" height="120" loading="lazy">
               {%- when 'bars' -%}
-              {%- comment -%}Goat holding two oat bars{%- endcomment -%}
-              <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <!-- Body -->
-                <ellipse cx="70" cy="112" rx="34" ry="26" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Head -->
-                <circle cx="70" cy="66" r="30" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Muzzle -->
-                <ellipse cx="70" cy="78" rx="16" ry="11" fill="#e8dec8" stroke="#181818" stroke-width="2"/>
-                <!-- Eyes -->
-                <circle cx="59" cy="59" r="4" fill="#181818"/>
-                <circle cx="81" cy="59" r="4" fill="#181818"/>
-                <circle cx="60.5" cy="57.5" r="1.5" fill="#fff"/>
-                <circle cx="82.5" cy="57.5" r="1.5" fill="#fff"/>
-                <!-- Nostrils -->
-                <ellipse cx="65" cy="82" rx="2" ry="1.5" fill="#c9b99a"/>
-                <ellipse cx="75" cy="82" rx="2" ry="1.5" fill="#c9b99a"/>
-                <!-- Horns -->
-                <path d="M58 39 C53 27 46 22 51 13" stroke="#181818" stroke-width="2.5"/>
-                <path d="M82 39 C87 27 94 22 89 13" stroke="#181818" stroke-width="2.5"/>
-                <!-- Ears -->
-                <path d="M41 60 C30 52 28 66 38 71" fill="#f3ecdd" stroke="#181818" stroke-width="2"/>
-                <path d="M99 60 C110 52 112 66 102 71" fill="#f3ecdd" stroke="#181818" stroke-width="2"/>
-                <!-- Beard -->
-                <path d="M63 88 Q70 98 77 88" stroke="#181818" stroke-width="2"/>
-                <!-- Arms/hooves holding bars -->
-                <path d="M36 108 Q24 108 18 118" stroke="#f3ecdd" stroke-width="10" stroke-linecap="round"/>
-                <path d="M36 108 Q24 108 18 118" stroke="#181818" stroke-width="2.5"/>
-                <path d="M104 108 Q116 108 122 118" stroke="#f3ecdd" stroke-width="10" stroke-linecap="round"/>
-                <path d="M104 108 Q116 108 122 118" stroke="#181818" stroke-width="2.5"/>
-                <!-- Left oat bar -->
-                <rect x="6" y="114" width="22" height="36" rx="5" fill="#ffcc00" stroke="#181818" stroke-width="2"/>
-                <rect x="9" y="118" width="16" height="5" rx="2" fill="#181818" opacity="0.15"/>
-                <rect x="9" y="126" width="16" height="5" rx="2" fill="#181818" opacity="0.15"/>
-                <rect x="9" y="134" width="16" height="5" rx="2" fill="#181818" opacity="0.15"/>
-                <!-- Right oat bar -->
-                <rect x="112" y="114" width="22" height="36" rx="5" fill="#ffcc00" stroke="#181818" stroke-width="2"/>
-                <rect x="115" y="118" width="16" height="5" rx="2" fill="#181818" opacity="0.15"/>
-                <rect x="115" y="126" width="16" height="5" rx="2" fill="#181818" opacity="0.15"/>
-                <rect x="115" y="134" width="16" height="5" rx="2" fill="#181818" opacity="0.15"/>
-                <!-- Legs -->
-                <rect x="52" y="130" width="13" height="20" rx="6" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <rect x="75" y="130" width="13" height="20" rx="6" fill="#f3ecdd" stroke="#181818" stroke-width="2.5"/>
-                <!-- Cheeky wink -->
-                <path d="M60 84 Q70 92 80 84" stroke="#181818" stroke-width="2"/>
-                <line x1="77" y1="58" x2="85" y2="60" stroke="#181818" stroke-width="2.5"/>
-              </svg>
-
+                <img src="{{ 'KOAT-goat-refund.png' | asset_url }}" alt="Goat refund" width="120" height="120" loading="lazy">
             {%- endcase -%}
           </div>
           <p class="koat-guarantee__title">{{ block.settings.title | escape }}</p>
