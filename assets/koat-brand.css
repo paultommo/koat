@@ -56,12 +56,32 @@
   border-radius: 20px !important;
 }
 
+.card__media {
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden;
+}
+
+.card__media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
 .card__heading {
   font-family: var(--font-body-family) !important;
   font-weight: 800 !important;
   font-size: 17px !important;
   line-height: 1.2 !important;
   letter-spacing: normal !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(17px * 1.2 * 2);
+}
+
+.price__container {
+  min-height: 56px;
 }
 
 .koat-card__price-row {
