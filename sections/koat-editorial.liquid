@@ -21,15 +21,33 @@
   <div class="koat-editorial__grid">
     {%- for block in section.blocks -%}
       {%- if block.type == 'panel' -%}
-        <div class="koat-editorial__panel koat-editorial__panel--{{ block.settings.tone }}" {{ block.shopify_attributes }}>
-          {%- if block.settings.badge_text != blank -%}
-            <span class="koat-badge koat-badge--ink">{{ block.settings.badge_text | escape }}</span>
-          {%- endif -%}
-          {%- if block.settings.heading != blank -%}
-            <h3 class="koat-editorial__heading">{{ block.settings.heading }}</h3>
-          {%- endif -%}
-          {%- if block.settings.body != blank -%}
-            <div class="koat-editorial__body rte">{{ block.settings.body }}</div>
+        <div class="koat-editorial__panel koat-editorial__panel--{{ block.settings.tone }}{% if block.settings.image != blank and block.settings.image.aspect_ratio %} koat-editorial__panel--image{% endif %}" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank and block.settings.image.aspect_ratio -%}
+            {{
+              block.settings.image
+              | image_url: width: 900
+              | image_tag: widths: '450, 600, 900', sizes: '(min-width: 750px) 45vw, 90vw', class: 'koat-editorial__image'
+            }}
+          {%- else -%}
+            {%- if block.settings.badge_text != blank -%}
+              <span class="koat-badge koat-badge--ink">{{ block.settings.badge_text | escape }}</span>
+            {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              <h3 class="koat-editorial__heading">{{ block.settings.heading }}</h3>
+            {%- endif -%}
+            {%- if block.settings.body != blank -%}
+              <div class="koat-editorial__body rte">{{ block.settings.body }}</div>
+            {%- endif -%}
+            {%- if block.settings.heading_2 != blank -%}
+              <div class="koat-editorial__content-divider"></div>
+              {%- if block.settings.badge_text_2 != blank -%}
+                <span class="koat-badge koat-badge--ink">{{ block.settings.badge_text_2 | escape }}</span>
+              {%- endif -%}
+              <h3 class="koat-editorial__heading">{{ block.settings.heading_2 }}</h3>
+              {%- if block.settings.body_2 != blank -%}
+                <div class="koat-editorial__body rte">{{ block.settings.body_2 }}</div>
+              {%- endif -%}
+            {%- endif -%}
           {%- endif -%}
         </div>
       {%- endif -%}
@@ -111,6 +129,34 @@
           "id": "body",
           "label": "Body text",
           "default": "<p>Whole rolled oats, real fruit, and nothing you can't pronounce. No funny business, no fillers.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Second content block"
+        },
+        {
+          "type": "text",
+          "id": "badge_text_2",
+          "label": "Badge text"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_2",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "body_2",
+          "label": "Body text"
+        },
+        {
+          "type": "header",
+          "content": "Image panel"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image (fills panel — leave blank to show text)"
         }
       ]
     }
