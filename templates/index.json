@@ -92,6 +92,18 @@
         "padding_bottom": 0
       }
     },
+    "koat_testimonials": {
+      "type": "koat-testimonials",
+      "blocks": {
+        "review-1": { "type": "review", "settings": { "text": "These are honestly the best snacks I've ever had. My gut has never felt better.", "author": "Sarah M." } },
+        "review-2": { "type": "review", "settings": { "text": "The banana kefir bar is absolutely incredible. 12g of protein and it actually tastes good? Sold.", "author": "James T." } },
+        "review-3": { "type": "review", "settings": { "text": "I was sceptical but after a week I could genuinely feel the difference. Obsessed.", "author": "Priya K." } },
+        "review-4": { "type": "review", "settings": { "text": "Finally a healthy snack that doesn't taste like cardboard. The blueberry one is my go-to.", "author": "Luca B." } },
+        "review-5": { "type": "review", "settings": { "text": "Bought for my kids too. They love them and I love that they're actually good for them.", "author": "Emma R." } }
+      },
+      "block_order": ["review-1", "review-2", "review-3", "review-4", "review-5"],
+      "settings": { "heading": "what people are saying" }
+    },
     "koat_editorial": {
       "type": "koat-editorial",
       "blocks": {
@@ -141,6 +153,7 @@
     "koat_hero",
     "koat_marquee",
     "featured_collection",
+    "koat_testimonials",
     "koat_editorial",
     "koat_retail_strip"
   ]

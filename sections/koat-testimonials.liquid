@@ -1,0 +1,157 @@
+{{ 'section-koat-testimonials.css' | asset_url | stylesheet_tag }}
+
+<div class="koat-testimonials">
+  <div class="koat-testimonials__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="koat-testimonials__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="koat-testimonials__overflow">
+      <div class="koat-testimonials__track" id="koat-testimonials-track-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          <div class="koat-testimonials__slide" {{ block.shopify_attributes }}>
+            <div class="koat-testimonials__card">
+              <div class="koat-testimonials__stars" aria-hidden="true">★★★★★</div>
+              <blockquote class="koat-testimonials__text">{{ block.settings.text | escape }}</blockquote>
+              {%- if block.settings.author != blank -%}
+                <cite class="koat-testimonials__author">{{ block.settings.author | escape }}</cite>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- if section.blocks.size > 1 -%}
+      <div class="koat-testimonials__dots" role="tablist" id="koat-testimonials-dots-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          <button
+            class="koat-testimonials__dot{% if forloop.first %} is-active{% endif %}"
+            data-index="{{ forloop.index0 }}"
+            role="tab"
+            aria-label="Review {{ forloop.index }}"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+          ></button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (function () {
+    var sectionId = {{ section.id | json }};
+    var track = document.getElementById('koat-testimonials-track-' + sectionId);
+    var dotsContainer = document.getElementById('koat-testimonials-dots-' + sectionId);
+    if (!track || !dotsContainer) return;
+
+    var dots = dotsContainer.querySelectorAll('.koat-testimonials__dot');
+    var total = dots.length;
+    var current = 0;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === current);
+        dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      });
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        goTo(parseInt(this.dataset.index, 10));
+      });
+    });
+
+    var startX = 0;
+    track.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+    }, { passive: true });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "what people are saying"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review text",
+          "default": "These are honestly the best snacks I've ever had. My gut has never felt better."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Customer name",
+          "default": "Sarah M."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "text": "These are honestly the best snacks I've ever had. My gut has never felt better.",
+            "author": "Sarah M."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "The banana kefir bar is absolutely incredible. 12g of protein and it actually tastes good? Sold.",
+            "author": "James T."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "I was sceptical but after a week I could genuinely feel the difference. Obsessed.",
+            "author": "Priya K."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "Finally a healthy snack that doesn't taste like cardboard. The blueberry one is my go-to.",
+            "author": "Luca B."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "Bought for my kids too. They love them and I love that they're actually good for them.",
+            "author": "Emma R."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

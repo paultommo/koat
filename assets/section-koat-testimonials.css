@@ -1,0 +1,121 @@
+.koat-testimonials {
+  background: #fbd7e6;
+  padding: 72px 0;
+  overflow: hidden;
+}
+
+.koat-testimonials__inner {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--page-width-margin, 3rem);
+}
+
+.koat-testimonials__heading {
+  font-family: var(--font-heading-family);
+  font-size: 3.6rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 0 0 48px;
+  color: #181818;
+}
+
+.koat-testimonials__overflow {
+  overflow: hidden;
+}
+
+.koat-testimonials__track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.koat-testimonials__slide {
+  min-width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.koat-testimonials__card {
+  background: #fff;
+  border: 2px solid #181818;
+  border-radius: 22px;
+  box-shadow: 3px 4px 0 #181818;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  text-align: center;
+}
+
+.koat-testimonials__stars {
+  color: #ffc107;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.koat-testimonials__text {
+  font-size: 1.8rem;
+  line-height: 1.55;
+  color: #181818;
+  margin: 0 0 24px;
+  font-style: normal;
+}
+
+.koat-testimonials__text::before {
+  content: '\201C';
+}
+
+.koat-testimonials__text::after {
+  content: '\201D';
+}
+
+.koat-testimonials__author {
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #181818;
+  font-style: normal;
+}
+
+.koat-testimonials__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.koat-testimonials__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid #181818;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.koat-testimonials__dot.is-active {
+  background: #181818;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 749px) {
+  .koat-testimonials {
+    padding: 48px 0;
+  }
+
+  .koat-testimonials__card {
+    padding: 28px 24px;
+  }
+
+  .koat-testimonials__heading {
+    font-size: 2.8rem;
+  }
+
+  .koat-testimonials__text {
+    font-size: 1.6rem;
+  }
+}
