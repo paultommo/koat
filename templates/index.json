@@ -33,7 +33,7 @@
         },
         "google-reviews": {
           "type": "google_reviews",
-          "settings": { "rating": "4.9", "review_count": "220+", "review_url": "" }
+          "settings": { "rating": "4.9", "review_count": "22,000+", "review_url": "" }
         },
         "tag": {
           "type": "tag",

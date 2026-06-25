@@ -42,7 +42,7 @@
 .koat-hero__reviews {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 3px;
   margin-top: 22px;
   color: inherit;
 }
@@ -51,15 +51,17 @@
   color: #ffc107;
   font-size: 1.95rem;
   letter-spacing: 1px;
+  margin-right: 2px;
 }
 
 .koat-hero__reviews-rating {
   font-weight: 700;
+  color: #ffc107;
+  font-size: 1.92rem;
 }
 
 .koat-hero__reviews-count {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  margin-left: 8px;
 }
 
 .koat-hero__media {
