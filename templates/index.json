@@ -236,6 +236,16 @@
         "padding_bottom": 0
       }
     },
+    "koat_guarantee": {
+      "type": "koat-guarantee",
+      "blocks": {
+        "box-1": { "type": "box", "settings": { "icon": "money", "title": "100% Money Back Guarantee" } },
+        "box-2": { "type": "box", "settings": { "icon": "headset", "title": "Speak to one of our world class human assistants" } },
+        "box-3": { "type": "box", "settings": { "icon": "bars", "title": "Easily swap your bundle" } }
+      },
+      "block_order": ["box-1", "box-2", "box-3"],
+      "settings": { "heading": "want a refund?" }
+    },
     "koat_retail_strip": {
       "type": "koat-retail-strip",
       "blocks": {
@@ -290,6 +300,7 @@
     "featured_collection",
     "koat_testimonials",
     "koat_editorial",
+    "koat_guarantee",
     "koat_retail_strip"
   ]
 }
