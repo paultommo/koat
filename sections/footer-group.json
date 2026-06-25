@@ -31,14 +31,14 @@
                     "type": "link_list",
                     "settings": {
                         "heading": "Learn",
-                        "menu": "footer"
+                        "menu": "footer-menu-2"
                     }
                 },
                 "company": {
                     "type": "link_list",
                     "settings": {
                         "heading": "Company",
-                        "menu": "footer"
+                        "menu": "footer-menu-3"
                     }
                 }
             },
