@@ -131,6 +131,14 @@
 
 /* ---------------- header: circular icon buttons ---------------- */
 
+.skip-to-content-link {
+  display: none !important;
+}
+
+.header__icons {
+  gap: 10px;
+}
+
 .header__icon {
   border-radius: var(--radius-pill, 999px);
   border: 0;
