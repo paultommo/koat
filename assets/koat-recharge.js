@@ -66,6 +66,9 @@
     'rc-benefits::part(rc-benefits__list) {',
     '  --rc-widget-bullet-icon-image-color: #fff !important;',
     '  --rc-widget-brand-color: #fff !important;',
+    '}',
+    '.rc-learn-more__trigger {',
+    '  color: #fff !important;',
     '}'
   ].join('\n');
 
