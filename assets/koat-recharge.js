@@ -55,6 +55,9 @@
     '}',
     '.rc-benefits__list li::before {',
     '  background-color: #fff !important;',
+    '  background: #fff !important;',
+    '  color: #fff !important;',
+    '  border-color: #fff !important;',
     '}'
   ].join('\n');
 
