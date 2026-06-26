@@ -12,27 +12,13 @@
     "koat_hero": {
       "type": "koat-hero",
       "blocks": {
-        "badge-1": {
-          "type": "badge",
-          "settings": {
-            "text": "12g Protein",
-            "tone": "banana"
-          }
-        },
-        "badge-2": {
-          "type": "badge",
-          "settings": {
-            "text": "Live Kefir Cultures",
-            "tone": "solid"
-          }
-        },
         "buttons": {
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop the bars",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Why kefir?",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": true
           }
@@ -53,8 +39,6 @@
         }
       },
       "block_order": [
-        "badge-1",
-        "badge-2",
         "buttons",
         "google-reviews",
         "tag"
@@ -239,9 +223,9 @@
     "koat_guarantee": {
       "type": "koat-guarantee",
       "blocks": {
-        "box-1": { "type": "box", "settings": { "icon": "money", "title": "100% Money Back Guarantee" } },
-        "box-2": { "type": "box", "settings": { "icon": "headset", "title": "Speak to one of our world class assistants" } },
-        "box-3": { "type": "box", "settings": { "icon": "bars", "title": "Easily swap your bundle" } }
+        "box-1": { "type": "box", "settings": { "icon": "money", "title": "We offer you a 100% Money Back Guarantee" } },
+        "box-2": { "type": "box", "settings": { "icon": "headset", "title": "If you're unhappy, speak to one of our world class assistants" } },
+        "box-3": { "type": "box", "settings": { "icon": "bars", "title": "You can easily swap bundles" } }
       },
       "block_order": ["box-1", "box-2", "box-3"],
       "settings": { "heading": "want a refund?" }
