@@ -243,6 +243,7 @@
 }
 
 .footer-block__heading {
+  font-family: var(--font-body-family);
   color: var(--koat-banana);
   text-transform: uppercase;
   letter-spacing: 0.08em;
