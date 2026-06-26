@@ -67,8 +67,21 @@
     '  --rc-widget-bullet-icon-image-color: #fff !important;',
     '  --rc-widget-brand-color: #fff !important;',
     '}',
-    '.rc-learn-more__trigger {',
+    '.rc-learn-more__trigger,',
+    '[part="rc-learn-more__trigger"] {',
     '  color: #fff !important;',
+    '}',
+    '.rc-plans-button__selected,',
+    '[data-checked] {',
+    '  background: #e0286e !important;',
+    '  color: #000 !important;',
+    '}',
+    '.rc-plans-button:not([data-checked]):not(.rc-plans-button__selected) {',
+    '  background: #ffcc00 !important;',
+    '  color: #000 !important;',
+    '}',
+    '.rc-plans-button:hover {',
+    '  background: #e0286e !important;',
     '}'
   ].join('\n');
 

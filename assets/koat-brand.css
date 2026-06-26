@@ -238,7 +238,7 @@ recharge-subscription-widget {
 }
 
 recharge-subscription-widget::part(rc-plans-button) {
-  background: #e0286e !important;
+  background: #ffcc00 !important;
   color: #000 !important;
   border: 2px solid #181818 !important;
   border-radius: 999px !important;
@@ -247,24 +247,30 @@ recharge-subscription-widget::part(rc-plans-button) {
   font-weight: 700 !important;
 }
 
+recharge-subscription-widget::part(rc-plans-button):hover {
+  background: #e0286e !important;
+  color: #000 !important;
+}
+
+recharge-subscription-widget::part(rc-plans-button__selected) {
+  background: #e0286e !important;
+  color: #000 !important;
+  border: 2px solid #181818 !important;
+  box-shadow: 3px 3px 0 #181818 !important;
+}
+
 recharge-subscription-widget::part(rc-benefits__list) {
   --rc-widget-bullet-icon-image-color: #fff !important;
   --rc-widget-brand-color: #fff !important;
 }
 
+recharge-subscription-widget::part(rc-learn-more__trigger),
+recharge-subscription-widget::part(rc-learn-more) {
+  color: #fff !important;
+}
+
 recharge-subscription-widget::part(rc-purchase-option__checked-indicator) {
   --rc-widget-brand-color: #fff !important;
-}
-
-recharge-subscription-widget::part(rc-plans-button):hover {
-  background: #ffcc00 !important;
-  color: #181818 !important;
-}
-
-recharge-subscription-widget::part(rc-plans-button__selected) {
-  background: #ffcc00 !important;
-  border: 2px solid #181818 !important;
-  box-shadow: 3px 3px 0 #181818 !important;
 }
 
 .rc-purchase-option.rc-purchase-option__subscription {
