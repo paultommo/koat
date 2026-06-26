@@ -53,11 +53,12 @@
     '  background: #fff !important;',
     '  border-color: #fff !important;',
     '}',
+    '.rc-benefits__list {',
+    '  --rc-widget-bullet-icon-image-color: #fff !important;',
+    '  --rc-widget-brand-color: #fff !important;',
+    '}',
     '.rc-benefits__list li::before {',
     '  background-color: #fff !important;',
-    '  background: #fff !important;',
-    '  color: #fff !important;',
-    '  border-color: #fff !important;',
     '}'
   ].join('\n');
 
