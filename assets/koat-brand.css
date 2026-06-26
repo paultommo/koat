@@ -247,6 +247,10 @@ recharge-subscription-widget::part(rc-plans-button) {
   font-weight: 700 !important;
 }
 
+recharge-subscription-widget::part(rc-purchase-option__checked-indicator) {
+  --rc-widget-brand-color: #fff !important;
+}
+
 recharge-subscription-widget::part(rc-plans-button):hover {
   background: #ffcc00 !important;
   color: #181818 !important;
