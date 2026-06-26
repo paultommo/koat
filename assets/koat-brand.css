@@ -231,7 +231,7 @@
 
 /* ---------------- recharge subscription widget ---------------- */
 
-recharge-subscription-widget {
+.rc-selection__root {
   max-width: none !important;
 }
 
@@ -239,15 +239,22 @@ recharge-subscription-widget {
   margin-top: 30px !important;
 }
 
-.rc-purchase-option,
+.rc-purchase-option.rc-purchase-option__subscription,
 .rc-purchase-option.rc-selection__onetime {
   background: #0000ff !important;
   color: #fff !important;
 }
 
+.rc-purchase-option.rc-purchase-option__subscription *,
+.rc-purchase-option.rc-selection__onetime * {
+  color: #fff !important;
+}
+
 .rc-plans-button,
 .rc-plans-buttons button,
-.rc-plans-buttons .rc-button {
+.rc-plans-buttons .rc-button,
+.rc-selection__root button[type="submit"],
+.rc-selection__root .rc-btn {
   background: #0000ff !important;
   color: #fff !important;
   border: 2px solid #181818 !important;
