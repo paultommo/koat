@@ -239,7 +239,7 @@
   max-width: 200px;
   height: auto;
   display: block;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .footer-block__heading {
@@ -328,6 +328,153 @@ recharge-subscription-widget {
 .collection--bundles .collection-hero__title,
 .collection--all .collection-hero__title {
   display: none !important;
+}
+
+/* ---------------- about page ---------------- */
+
+.page--about .page-width { max-width: 860px; }
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.about-hero__eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #0000ff;
+  margin: 0 0 12px;
+}
+
+.about-hero__title {
+  font-family: var(--font-heading-family);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: #181818;
+  margin: 0 0 20px;
+  line-height: 1;
+}
+
+.about-hero__lead {
+  font-size: 1.2rem;
+  max-width: 560px;
+  margin: 0 auto;
+  color: rgba(var(--color-foreground), 0.7);
+  line-height: 1.6;
+}
+
+.about-founders-image {
+  width: 100%;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 4px 4px 0 #181818;
+  display: block;
+  margin-bottom: 64px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #f3ecdd;
+}
+
+.about-founders-image--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading-family);
+  font-size: 1rem;
+  color: rgba(var(--color-foreground), 0.4);
+  letter-spacing: 0.05em;
+}
+
+.about-story {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+
+.about-story__block {
+  padding: 36px;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+}
+
+.about-story__block:nth-child(odd) { background: #f3ecdd; }
+.about-story__block:nth-child(even) { background: #dce3fb; }
+
+.about-story__block h2 {
+  font-family: var(--font-heading-family);
+  font-size: 2rem;
+  margin: 0 0 16px;
+  color: #181818;
+}
+
+.about-story__block p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+  color: rgba(var(--color-foreground), 0.82);
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.about-value {
+  padding: 28px 24px;
+  background: #ffcc00;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+  text-align: center;
+}
+
+.about-value__heading {
+  font-family: var(--font-heading-family);
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+  color: #181818;
+}
+
+.about-value p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(24, 24, 24, 0.75);
+}
+
+.about-cta {
+  text-align: center;
+  padding: 48px 32px;
+  background: #0000ff;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+}
+
+.about-cta__text {
+  font-family: var(--font-heading-family);
+  font-size: 2rem;
+  color: #ffcc00;
+  margin: 0 0 24px;
+}
+
+.about-cta .button {
+  background: #ffcc00;
+  color: #181818;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+  text-decoration: none;
+}
+
+.about-cta .button:hover { background: #fff; }
+
+@media screen and (max-width: 749px) {
+  .about-values { grid-template-columns: 1fr; }
 }
 
 /* ---------------- why kefir page ---------------- */
