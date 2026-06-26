@@ -59,6 +59,10 @@
     '}',
     '.rc-benefits__list li::before {',
     '  background-color: #fff !important;',
+    '}',
+    'rc-benefits::part(rc-benefits__list) {',
+    '  --rc-widget-bullet-icon-image-color: #fff !important;',
+    '  --rc-widget-brand-color: #fff !important;',
     '}'
   ].join('\n');
 
@@ -71,13 +75,38 @@
     root.appendChild(style);
   }
 
+  var BENEFITS_STYLES = [
+    '.rc-benefits__list {',
+    '  --rc-widget-bullet-icon-image-color: #fff !important;',
+    '  --rc-widget-brand-color: #fff !important;',
+    '}',
+    '.rc-benefits__list li::before {',
+    '  background-color: #fff !important;',
+    '}'
+  ].join('\n');
+
+  function injectBenefitsStyles(root) {
+    var existing = root.querySelector('#koat-rc-benefits-styles');
+    if (existing) { existing.textContent = BENEFITS_STYLES; return; }
+    var style = document.createElement('style');
+    style.id = 'koat-rc-benefits-styles';
+    style.textContent = BENEFITS_STYLES;
+    root.appendChild(style);
+  }
+
   function attachToWidget(widget) {
     var root = widget.shadowRoot;
     if (!root) return;
     injectStyles(root);
     new MutationObserver(function () {
       injectStyles(root);
-    }).observe(root, { childList: true, subtree: false });
+      root.querySelectorAll('rc-benefits').forEach(function (el) {
+        if (el.shadowRoot) injectBenefitsStyles(el.shadowRoot);
+      });
+    }).observe(root, { childList: true, subtree: true });
+    root.querySelectorAll('rc-benefits').forEach(function (el) {
+      if (el.shadowRoot) injectBenefitsStyles(el.shadowRoot);
+    });
   }
 
   function findAndAttach() {

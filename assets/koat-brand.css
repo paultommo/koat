@@ -247,6 +247,11 @@ recharge-subscription-widget::part(rc-plans-button) {
   font-weight: 700 !important;
 }
 
+recharge-subscription-widget::part(rc-benefits__list) {
+  --rc-widget-bullet-icon-image-color: #fff !important;
+  --rc-widget-brand-color: #fff !important;
+}
+
 recharge-subscription-widget::part(rc-purchase-option__checked-indicator) {
   --rc-widget-brand-color: #fff !important;
 }
