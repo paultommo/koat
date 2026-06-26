@@ -231,37 +231,23 @@
 
 /* ---------------- recharge subscription widget ---------------- */
 
-.rc-selection__root {
-  max-width: none !important;
-}
-
-.rc-purchase-option-group {
-  margin-top: 30px !important;
-}
-
-.rc-purchase-option.rc-purchase-option__subscription,
-.rc-purchase-option.rc-selection__onetime {
-  background: #0000ff !important;
-  color: #fff !important;
-}
-
-.rc-purchase-option.rc-purchase-option__subscription *,
-.rc-purchase-option.rc-selection__onetime * {
-  color: #fff !important;
-}
-
-.rc-plans-button,
-.rc-plans-buttons button,
-.rc-plans-buttons .rc-button,
-.rc-selection__root button[type="submit"],
-.rc-selection__root .rc-btn {
-  background: #0000ff !important;
-  color: #fff !important;
-  border: 2px solid #181818 !important;
-  border-radius: 999px !important;
-  box-shadow: 3px 3px 0 #181818 !important;
-  font-family: var(--font-body-family) !important;
-  font-weight: 700 !important;
+:root {
+  --rc-widget-brand-color: #0000ff;
+  --rc-widget-brand-color-10: color-mix(in srgb, #0000ff 10%, #ffffff);
+  --rc-widget-brand-color-20: color-mix(in srgb, #0000ff 20%, #ffffff);
+  --rc-widget-brand-color-50: color-mix(in srgb, #0000ff 50%, #ffffff);
+  --rc-widget-brand-color-70: color-mix(in srgb, #0000ff 70%, #ffffff);
+  --rc-widget-brand-color-80: color-mix(in srgb, #0000ff 80%, #ffffff);
+  --rc-widget-brand-contrast-color: #ffffff;
+  --rc-widget-text-color: #181818;
+  --rc-widget-selected-bg-color: #0000ff;
+  --rc-widget-selected-text-color: #ffffff;
+  --rc-widget-badge-text-color: #181818;
+  --rc-widget-badge-bg-color: #ffcc00;
+  --rc-widget-card-radius: 22px;
+  --rc-widget-button-radius: 999px;
+  --rc-widget-badge-radius: 999px;
+  --rc-widget-field-radius: 14px;
 }
 
 /* ---------------- cart drawer / quantity stepper ---------------- */
