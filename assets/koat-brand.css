@@ -316,8 +316,146 @@ recharge-subscription-widget {
   --rc-widget-field-radius: 14px !important;
 }
 
-.collection-hero__text-wrapper {
+.page--why-kefir .collection-hero__text-wrapper,
+.page--about .collection-hero__text-wrapper {
   display: none !important;
+}
+
+/* ---------------- why kefir page ---------------- */
+
+.page--why-kefir .page-width { max-width: 900px; }
+
+.kefir-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.kefir-hero__title {
+  font-family: var(--font-heading-family);
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #0000ff;
+  margin: 0 0 16px;
+  line-height: 1;
+}
+
+.kefir-hero__lead {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.kefir-intro {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+  padding: 32px;
+  background: #ffcc00;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+}
+
+.kefir-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.kefir-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px;
+  background: #dce3fb;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+}
+
+.kefir-stat__number {
+  font-family: var(--font-heading-family);
+  font-size: 3rem;
+  color: #0000ff;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.kefir-stat__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.kefir-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.kefir-benefit {
+  padding: 32px;
+  background: #f3ecdd;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+}
+
+.kefir-benefit:nth-child(even) {
+  background: #fbd7e6;
+}
+
+.kefir-benefit h2 {
+  font-family: var(--font-heading-family);
+  font-size: 1.75rem;
+  margin: 0 0 12px;
+  color: #181818;
+}
+
+.kefir-benefit p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  color: rgba(var(--color-foreground), 0.8);
+}
+
+.kefir-cta {
+  text-align: center;
+  padding: 48px 32px;
+  background: #0000ff;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+}
+
+.kefir-cta__text {
+  font-family: var(--font-heading-family);
+  font-size: 2rem;
+  color: #ffcc00;
+  margin: 0 0 24px;
+}
+
+.kefir-cta .button {
+  background: #ffcc00;
+  color: #181818;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+  text-decoration: none;
+}
+
+.kefir-cta .button:hover {
+  background: #fff;
+}
+
+@media screen and (max-width: 749px) {
+  .kefir-stats { grid-template-columns: 1fr; }
 }
 
 /* ---------------- cart drawer / quantity stepper ---------------- */
