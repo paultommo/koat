@@ -1,54 +1,66 @@
 (function () {
-  var MAX_ATTEMPTS = 30;
-  var INTERVAL = 200;
-  var attempts = 0;
+  var STYLES = [
+    '.rc-purchase-option,',
+    '[class*="rc-purchase-option"] {',
+    '  background-color: #0000ff !important;',
+    '  color: #fff !important;',
+    '  border-color: rgba(255,255,255,0.3) !important;',
+    '}',
+    '.rc-purchase-option *,',
+    '[class*="rc-purchase-option"] * {',
+    '  color: #fff !important;',
+    '}',
+    'button,',
+    '[class*="rc-btn"],',
+    '[class*="rc-button"],',
+    '[type="submit"] {',
+    '  background: #ffcc00 !important;',
+    '  color: #181818 !important;',
+    '  border: 2px solid #181818 !important;',
+    '  border-radius: 999px !important;',
+    '  box-shadow: 3px 3px 0 #181818 !important;',
+    '  font-family: "Hanken Grotesk", sans-serif !important;',
+    '  font-weight: 700 !important;',
+    '}'
+  ].join('\n');
 
   function injectStyles(root) {
-    if (root.querySelector('#koat-rc-styles')) return;
+    var existing = root.querySelector('#koat-rc-styles');
+    if (existing) { existing.textContent = STYLES; return; }
     var style = document.createElement('style');
     style.id = 'koat-rc-styles';
-    style.textContent = [
-      '.rc-purchase-option,',
-      '[class*="rc-purchase-option"] {',
-      '  background-color: #0000ff !important;',
-      '  color: #fff !important;',
-      '  border-color: #fff !important;',
-      '}',
-      '.rc-purchase-option *,',
-      '[class*="rc-purchase-option"] * {',
-      '  color: #fff !important;',
-      '}',
-      'button,',
-      '[class*="rc-btn"],',
-      '[class*="rc-button"],',
-      '[type="submit"] {',
-      '  background: #ffcc00 !important;',
-      '  color: #181818 !important;',
-      '  border: 2px solid #181818 !important;',
-      '  border-radius: 999px !important;',
-      '  box-shadow: 3px 3px 0 #181818 !important;',
-      '  font-family: "Hanken Grotesk", sans-serif !important;',
-      '  font-weight: 700 !important;',
-      '}'
-    ].join('\n');
+    style.textContent = STYLES;
     root.appendChild(style);
   }
 
-  function tryInject() {
-    var widget = document.querySelector('recharge-subscription-widget');
-    if (widget && widget.shadowRoot && widget.shadowRoot.children.length > 0) {
-      injectStyles(widget.shadowRoot);
-      return;
-    }
-    if (attempts < MAX_ATTEMPTS) {
-      attempts++;
-      setTimeout(tryInject, INTERVAL);
-    }
+  function attachToWidget(widget) {
+    var root = widget.shadowRoot;
+    if (!root) return;
+    injectStyles(root);
+    new MutationObserver(function () {
+      injectStyles(root);
+    }).observe(root, { childList: true, subtree: false });
   }
 
+  function findAndAttach() {
+    var widgets = document.querySelectorAll('recharge-subscription-widget');
+    widgets.forEach(attachToWidget);
+    return widgets.length > 0;
+  }
+
+  var attempts = 0;
+  function poll() {
+    if (findAndAttach()) return;
+    if (attempts++ < 40) setTimeout(poll, 250);
+  }
+
+  new MutationObserver(function () {
+    findAndAttach();
+  }).observe(document.body, { childList: true, subtree: true });
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', tryInject);
+    document.addEventListener('DOMContentLoaded', poll);
   } else {
-    tryInject();
+    poll();
   }
 })();
