@@ -20,6 +20,17 @@
     '  box-shadow: 3px 3px 0 #181818 !important;',
     '  font-family: "Hanken Grotesk", sans-serif !important;',
     '  font-weight: 700 !important;',
+    '}',
+    '.rc-plans-button-group button,',
+    '.rc-plans-button-group [class*="rc-btn"],',
+    '.rc-plans-button-group [class*="rc-button"] {',
+    '  background: #ffcc00 !important;',
+    '  color: #181818 !important;',
+    '  border: 2px solid #181818 !important;',
+    '  border-radius: 999px !important;',
+    '  box-shadow: 3px 3px 0 #181818 !important;',
+    '  font-family: "Hanken Grotesk", sans-serif !important;',
+    '  font-weight: 700 !important;',
     '}'
   ].join('\n');
 
