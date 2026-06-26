@@ -1,10 +1,12 @@
 (function () {
   var STYLES = [
-    '.rc-purchase-option.rc-purchase-option__subscription {',
+    '.rc-purchase-option.rc-purchase-option__subscription,',
+    '.rc-purchase-option.rc-selection__onetime {',
     '  background-color: #0000ff !important;',
     '  color: #fff !important;',
     '}',
-    '.rc-purchase-option.rc-purchase-option__subscription * {',
+    '.rc-purchase-option.rc-purchase-option__subscription *,',
+    '.rc-purchase-option.rc-selection__onetime * {',
     '  color: #fff !important;',
     '}',
     'button,',
