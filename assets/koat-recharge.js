@@ -41,6 +41,9 @@
     'input[type="radio"]::after {',
     '  background: #fff !important;',
     '  border-color: #fff !important;',
+    '}',
+    '.rc-benefits__list li::before {',
+    '  background-color: #fff !important;',
     '}'
   ].join('\n');
 
