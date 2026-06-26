@@ -33,6 +33,12 @@
   border-radius: 999px !important;
 }
 
+.koat-hero .button {
+  border: 2px solid #181818 !important;
+  border-radius: 999px !important;
+  box-shadow: 3px 3px 0 #181818;
+}
+
 /* ---------------- product card: ink outline, radius, sticker shadow ---------------- */
 
 .card-wrapper .card__media {
