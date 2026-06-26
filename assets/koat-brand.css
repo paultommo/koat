@@ -247,6 +247,11 @@ recharge-subscription-widget::part(rc-plans-button) {
   font-weight: 700 !important;
 }
 
+recharge-subscription-widget::part(rc-plans-button):hover {
+  background: #ffcc00 !important;
+  color: #181818 !important;
+}
+
 recharge-subscription-widget::part(rc-plans-button__selected) {
   background: #ffcc00 !important;
   border: 2px solid #181818 !important;
