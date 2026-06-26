@@ -333,7 +333,7 @@ recharge-subscription-widget {
 
 /* ---------------- about page ---------------- */
 
-.page--about .page-width { max-width: 860px; }
+.page--about #MainContent .page-width { max-width: 860px; }
 
 .about-hero {
   text-align: center;
@@ -480,7 +480,7 @@ recharge-subscription-widget {
 
 /* ---------------- why kefir page ---------------- */
 
-.page--why-kefir .page-width { max-width: 900px; }
+.page--why-kefir #MainContent .page-width { max-width: 900px; }
 
 .kefir-hero {
   text-align: center;
