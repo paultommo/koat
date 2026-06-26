@@ -231,6 +231,11 @@
 
 /* ---------------- recharge subscription widget ---------------- */
 
+.rc-purchase-option.rc-purchase-option__subscription {
+  background: #0000ff !important;
+  color: #fff !important;
+}
+
 recharge-subscription-widget {
   --rc-widget-brand-color: #0000ff !important;
   --rc-widget-brand-color-10: color-mix(in srgb, #0000ff 10%, #ffffff) !important;
