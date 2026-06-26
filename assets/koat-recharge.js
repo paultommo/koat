@@ -94,19 +94,21 @@
     root.appendChild(style);
   }
 
+  function attachBenefits(root) {
+    root.querySelectorAll('rc-benefits').forEach(function (el) {
+      if (el.shadowRoot) injectBenefitsStyles(el.shadowRoot);
+    });
+  }
+
   function attachToWidget(widget) {
     var root = widget.shadowRoot;
     if (!root) return;
     injectStyles(root);
+    attachBenefits(root);
     new MutationObserver(function () {
       injectStyles(root);
-      root.querySelectorAll('rc-benefits').forEach(function (el) {
-        if (el.shadowRoot) injectBenefitsStyles(el.shadowRoot);
-      });
-    }).observe(root, { childList: true, subtree: true });
-    root.querySelectorAll('rc-benefits').forEach(function (el) {
-      if (el.shadowRoot) injectBenefitsStyles(el.shadowRoot);
-    });
+      attachBenefits(root);
+    }).observe(root, { childList: true, subtree: false });
   }
 
   function findAndAttach() {
