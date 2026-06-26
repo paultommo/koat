@@ -4,6 +4,8 @@
     '.rc-purchase-option.rc-selection__onetime {',
     '  background-color: #0000ff !important;',
     '  color: #fff !important;',
+    '  border: 2px solid #181818 !important;',
+    '  box-shadow: 3px 3px 0 #181818 !important;',
     '}',
     '.rc-purchase-option.rc-purchase-option__subscription *,',
     '.rc-purchase-option.rc-selection__onetime * {',
