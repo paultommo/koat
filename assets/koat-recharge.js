@@ -1,13 +1,10 @@
 (function () {
   var STYLES = [
-    '.rc-purchase-option,',
-    '[class*="rc-purchase-option"] {',
+    '.rc-purchase-option.rc-purchase-option__subscription {',
     '  background-color: #0000ff !important;',
     '  color: #fff !important;',
-    '  border-color: rgba(255,255,255,0.3) !important;',
     '}',
-    '.rc-purchase-option *,',
-    '[class*="rc-purchase-option"] * {',
+    '.rc-purchase-option.rc-purchase-option__subscription * {',
     '  color: #fff !important;',
     '}',
     'button,',
