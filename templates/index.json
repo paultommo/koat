@@ -246,51 +246,13 @@
       "block_order": ["box-1", "box-2", "box-3"],
       "settings": { "heading": "want a refund?" }
     },
-    "koat_retail_strip": {
-      "type": "koat-retail-strip",
-      "blocks": {
-        "retailer-1": {
-          "type": "retailer",
-          "settings": {
-            "name": "Walmart"
-          }
-        },
-        "retailer-2": {
-          "type": "retailer",
-          "settings": {
-            "name": "Whole Foods"
-          }
-        },
-        "retailer-3": {
-          "type": "retailer",
-          "settings": {
-            "name": "Target"
-          }
-        },
-        "retailer-4": {
-          "type": "retailer",
-          "settings": {
-            "name": "Instacart"
-          }
-        },
-        "retailer-5": {
-          "type": "retailer",
-          "settings": {
-            "name": "Sprouts"
-          }
-        }
-      },
-      "block_order": [
-        "retailer-1",
-        "retailer-2",
-        "retailer-3",
-        "retailer-4",
-        "retailer-5"
-      ],
+    "koat_newsletter": {
+      "type": "koat-newsletter",
       "settings": {
-        "label": "Find us in store & online",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "heading": "want special offers, new flavours and more?",
+        "body": "Then sign up for our delicious mailing list below. AND get a 10% discount off your first order too",
+        "placeholder": "your email address",
+        "button_label": "Subscribe"
       }
     }
   },
@@ -301,6 +263,6 @@
     "koat_testimonials",
     "koat_editorial",
     "koat_guarantee",
-    "koat_retail_strip"
+    "koat_newsletter"
   ]
 }
