@@ -316,6 +316,10 @@ recharge-subscription-widget {
   --rc-widget-field-radius: 14px !important;
 }
 
+.collection-hero__text-wrapper {
+  display: none !important;
+}
+
 /* ---------------- cart drawer / quantity stepper ---------------- */
 
 .quantity__button {
