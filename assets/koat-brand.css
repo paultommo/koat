@@ -321,6 +321,10 @@ recharge-subscription-widget {
   display: none !important;
 }
 
+.main-page-title {
+  display: none !important;
+}
+
 /* ---------------- why kefir page ---------------- */
 
 .page--why-kefir .page-width { max-width: 900px; }
