@@ -238,8 +238,8 @@ recharge-subscription-widget {
 }
 
 recharge-subscription-widget::part(rc-plans-button) {
-  background: #ffcc00 !important;
-  color: #181818 !important;
+  background: #e0286e !important;
+  color: #fff !important;
   border: 2px solid #181818 !important;
   border-radius: 999px !important;
   box-shadow: 3px 3px 0 #181818 !important;
