@@ -374,6 +374,7 @@ recharge-subscription-widget {
   margin-bottom: 64px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: center 20%;
   background: #f3ecdd;
 }
 
