@@ -88,6 +88,10 @@
   .footer-block__brand-info > img {
     margin-left: -40px !important;
   }
+
+  .koat-newsletter__input {
+    font-size: 2.5rem;
+  }
 }
 
 .card__heading {
