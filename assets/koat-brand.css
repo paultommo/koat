@@ -230,11 +230,14 @@
 
 /* ---------------- footer ---------------- */
 
+.footer-brand-logo-wrap {
+  display: inline-block;
+}
+
 .footer-credit {
   font-size: 0.75rem;
   margin-top: 12px;
   color: rgba(255, 255, 255, 0.5);
-  text-align: left;
 }
 
 .footer-credit a {

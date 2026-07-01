@@ -128,19 +128,21 @@
                       {%- if settings.brand_description != blank -%}
                         <div class="rte">{{ settings.brand_description }}</div>
                       {%- elsif settings.logo != blank and settings.logo.aspect_ratio -%}
-                        <img
-                          src="{{ settings.logo | image_url: width: 400 }}"
-                          alt="{{ shop.name }}"
-                          width="200"
-                          height="{{ 200 | divided_by: settings.logo.aspect_ratio | round }}"
-                          class="footer-brand-logo"
-                          loading="lazy"
-                        >
+                        <div class="footer-brand-logo-wrap">
+                          <img
+                            src="{{ settings.logo | image_url: width: 400 }}"
+                            alt="{{ shop.name }}"
+                            width="200"
+                            height="{{ 200 | divided_by: settings.logo.aspect_ratio | round }}"
+                            class="footer-brand-logo"
+                            loading="lazy"
+                          >
+                          <p class="footer-credit">Website by <a href="https://paultommo.com" target="_blank" rel="noopener">Paul Tommo</a></p>
+                        </div>
                       {%- endif -%}
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
                       {%- endif -%}
-                      <p class="footer-credit">Website by <a href="https://paultommo.com" target="_blank" rel="noopener">Paul Tommo</a></p>
                     </div>
                   {%- when 'image' -%}
                     <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
