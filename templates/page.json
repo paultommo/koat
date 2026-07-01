@@ -23,7 +23,7 @@
         "image": "shopify://shop_images/KOAT-bundle1.png",
         "heading": "Subscribe now and get 25% off your first order.",
         "button_label": "Shop bundles",
-        "button_url": "",
+        "button_url": "shopify://collections/bundles",
         "color_scheme": ""
       }
     }
