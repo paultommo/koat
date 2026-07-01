@@ -230,13 +230,10 @@
 
 /* ---------------- footer ---------------- */
 
-.footer-brand-logo-wrap {
-  display: inline-block;
-}
-
-.footer-credit {
+.footer-credit--centered {
+  text-align: center;
   font-size: 0.75rem;
-  margin-top: 12px;
+  margin: 0 0 8px;
   color: rgba(255, 255, 255, 0.5);
 }
 
