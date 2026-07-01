@@ -23,6 +23,9 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <p class="contact-form__description rte">{{ section.settings.description }}</p>
+    {%- endif -%}
     {%- liquid
       assign contact_form_class = 'isolate'
       if settings.animations_reveal_on_scroll
@@ -149,6 +152,12 @@
       "id": "heading",
       "default": "t:sections.contact-form.settings.title.default",
       "label": "t:sections.contact-form.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Please contact us using the form below. We aim to respond within 24 hours."
     },
     {
       "type": "select",
