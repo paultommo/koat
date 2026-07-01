@@ -84,6 +84,10 @@
   .card__information {
     height: 200px;
   }
+
+  .footer-block__brand-info > img {
+    margin-left: 40px;
+  }
 }
 
 .card__heading {
