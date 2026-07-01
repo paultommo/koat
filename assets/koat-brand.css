@@ -645,7 +645,7 @@ recharge-subscription-widget {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  background: #ffcc00;
+  background: #0000ff;
   border-radius: 0;
   border: 2px solid #181818;
   box-shadow: 3px 3px 0 #181818;
@@ -672,7 +672,7 @@ recharge-subscription-widget {
 .koat-about-cta__heading {
   font-family: var(--font-heading-family);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
-  color: #181818;
+  color: #ffcc00;
   margin: 0 0 28px;
   line-height: 1.1;
 }
