@@ -86,7 +86,7 @@
   }
 
   .footer-block__brand-info > img {
-    margin-left: 40px;
+    margin-left: -40px !important;
   }
 }
 
