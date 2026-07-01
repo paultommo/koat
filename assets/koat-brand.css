@@ -639,6 +639,63 @@ recharge-subscription-widget {
   .kefir-stats { grid-template-columns: 1fr; }
 }
 
+/* ---------------- about CTA section ---------------- */
+
+.koat-about-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #0000ff;
+  border-radius: 22px;
+  border: 2px solid #181818;
+  box-shadow: 3px 3px 0 #181818;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: var(--page-width);
+}
+
+.koat-about-cta__image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.koat-about-cta__image--placeholder {
+  background: #dce3fb;
+}
+
+.koat-about-cta__body {
+  padding: 48px 40px;
+}
+
+.koat-about-cta__heading {
+  font-family: var(--font-heading-family);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: #ffcc00;
+  margin: 0 0 28px;
+  line-height: 1.1;
+}
+
+.koat-about-cta__btn {
+  background: #ffcc00 !important;
+  color: #181818 !important;
+  border: 2px solid #181818 !important;
+  box-shadow: 3px 3px 0 #181818 !important;
+  text-decoration: none;
+}
+
+.koat-about-cta__btn:hover {
+  background: #fff !important;
+}
+
+@media screen and (max-width: 749px) {
+  .koat-about-cta { grid-template-columns: 1fr; }
+  .koat-about-cta__image { min-height: 240px; }
+  .koat-about-cta__body { padding: 36px 28px; }
+}
+
 /* ---------------- cart drawer / quantity stepper ---------------- */
 
 .quantity__button {
