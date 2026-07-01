@@ -80,6 +80,12 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 749px) {
+  .card__information {
+    height: 200px;
+  }
+}
+
 .card__heading {
   font-family: var(--font-body-family) !important;
   font-weight: 800 !important;
