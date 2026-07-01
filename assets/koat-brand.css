@@ -645,7 +645,7 @@ recharge-subscription-widget {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  background: #0000ff;
+  background: #ffcc00;
   border-radius: 0;
   border: 2px solid #181818;
   box-shadow: 3px 3px 0 #181818;
@@ -672,21 +672,21 @@ recharge-subscription-widget {
 .koat-about-cta__heading {
   font-family: var(--font-heading-family);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
-  color: #ffcc00;
+  color: #181818;
   margin: 0 0 28px;
   line-height: 1.1;
 }
 
 .koat-about-cta__btn {
-  background: #ffcc00 !important;
-  color: #181818 !important;
+  background: #0000ff !important;
+  color: #fff !important;
   border: 2px solid #181818 !important;
   box-shadow: 3px 3px 0 #181818 !important;
   text-decoration: none;
 }
 
 .koat-about-cta__btn:hover {
-  background: #fff !important;
+  background: #181818 !important;
 }
 
 @media screen and (max-width: 749px) {
